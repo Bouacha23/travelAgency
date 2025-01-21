@@ -1,12 +1,12 @@
 @font-face {
-  font-family: 'Roboto';
-  src: url("../fonts/Roboto-Regular.ttf") format('truetype');
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
 }
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -17,15 +17,14 @@ body {
 main {
   height: 100%;
 }
-a   {
-    text-decoration: none;
-    color: inherit;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 ul {
-    list-style-type: none;
-    padding-left: 0;
-  }
-
+  list-style-type: none;
+  padding-left: 0;
+}
 
 .container {
   width: 100%;
@@ -36,19 +35,19 @@ ul {
 }
 /* Footer */
 @property --dark-bg {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: #1f2937;
 }
 @property --secondary-bg {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: #e5e7eb;
 }
 @property --sign-up-btn-bg {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
-  initial-value: #3882F6;
+  initial-value: #3882f6;
 }
 .icon {
   font-size: 1.5rem;
@@ -65,7 +64,7 @@ ul {
   color: #1f2937;
 }
 .bg-color-blue {
-  background-color: #3882F6;
+  background-color: #3882f6;
   color: #fff;
 }
 .unselectable {
@@ -91,18 +90,17 @@ ul {
   text-align: center;
   align-items: center;
   padding: 1rem;
-  font-size: .9em 18px;
+  font-size: 0.9em 18px;
   gap: 1rem;
 }
 
-
-.form-container{
+.form-container {
   max-width: 70vw;
   height: 100%;
   width: 100%;
   align-self: center;
 }
-.form-container fieldset{
+.form-container fieldset {
   border: none;
   padding: 1rem;
   margin: 1rem 0;
@@ -110,7 +108,7 @@ ul {
   display: flex;
   flex-direction: column;
 }
-.form-container fieldset > div{
+.form-container fieldset > div {
   flex-basis: 100%;
   display: flex;
   flex-direction: row;
@@ -118,15 +116,14 @@ ul {
   align-items: center;
   flex-wrap: nowrap;
   gap: 1rem;
-
 }
-.form-container legend{
+.form-container legend {
   margin-right: auto;
   font-size: 36px;
   font-weight: bolder;
   color: #1f2937;
 }
-.form-container input{
+.form-container input {
   flex: 3;
   padding: 0.5rem;
   width: 100%;
@@ -139,13 +136,13 @@ ul {
   justify-self: end;
 }
 
-.form-container input:focus{
+.form-container input:focus {
   border-bottom: 2px solid #1f2937;
 }
-.form-container input::placeholder{
+.form-container input::placeholder {
   visibility: hidden;
 }
-.form-container textarea{
+.form-container textarea {
   flex: 3;
   padding: 0.5rem;
   width: 100%;
@@ -163,13 +160,13 @@ ul {
   scrollbar-gutter: auto;
 }
 .form-container textarea:focus,
-.form-container textarea:active{
+.form-container textarea:active {
   border-bottom: 2px solid #1f2937;
 }
-.form-container textarea::placeholder{
+.form-container textarea::placeholder {
   visibility: hidden;
 }
-.form-container label{
+.form-container label {
   flex: 1;
   font-size: 1rem;
   text-wrap: nowrap;
@@ -177,7 +174,7 @@ ul {
   justify-self: flex-start;
   text-align: start;
 }
-.sign-up-btn{
+.sign-up-btn {
   background-color: var(--sign-up-btn-bg);
   color: white;
   padding: 0.5rem 1rem;
@@ -189,13 +186,71 @@ ul {
   font-weight: bold;
   text-wrap: nowrap;
 }
-.sign-up-btn:hover, 
-.sign-up-btn:focus{
+.sign-up-btn:hover,
+.sign-up-btn:focus {
   filter: brightness(85%);
 }
 
 .sign-up-btn:active {
   filter: brightness(75%);
+}
+
+/* #### fran css */
+/* section 2 */
+.destinations-title {
+  font-size: 36px;
+  font-weight: 800;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+.destinations {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.small-destination {
+  width: 150px;
+  height: 150px;
+  border-radius: 15px;
+}
+
+.small-figure-destination > figcaption {
+  font-size: 22px;
+  width: 150px;
+}
+
+.small-figure-destination {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+/* section 3 */
+.quote-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: #e5e7eb;
+  padding: 6rem;
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+}
+
+.quote-destinations {
+  font-size: 36px;
+  font-style: italic;
+  font-weight: 300;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.quote-author {
+  font-size: 20px;
+  font-weight: 800;
 }
 
 /* xs */
@@ -204,14 +259,14 @@ ul {
     max-width: 475px;
   }
 }
-  
+
 /* sm */
 @media (min-width: 640px) {
   .container {
     max-width: 640px;
   }
 }
-  
+
 /* md */
 @media (max-width: 768px) {
   .container {
@@ -221,10 +276,10 @@ ul {
   .form-container label {
     display: none;
   }
-  .form-container input::placeholder{
+  .form-container input::placeholder {
     visibility: visible;
   }
-  .form-container textarea::placeholder{
+  .form-container textarea::placeholder {
     visibility: visible;
   }
   .md-container {
@@ -233,22 +288,21 @@ ul {
     margin: 0;
   }
 }
-  
+
 /* lg */
 @media (min-width: 1024px) {
   .container {
     max-width: 1024px;
   }
-
 }
-  
+
 /* xl */
 @media (min-width: 1280px) {
   .container {
     max-width: 1280px;
   }
 }
-  
+
 /* 2xl */
 @media (min-width: 1536px) {
   .container {
