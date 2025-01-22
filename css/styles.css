@@ -402,8 +402,7 @@ ul {
   }
 }
 
-/* lg */
-@media (min-width: 1024px) {
+
   .container {
     max-width: 1024px;
   }
@@ -540,7 +539,8 @@ ul {
   width: 100%;
  }
 
-
+ 
+ 
 
 
 /* md */
@@ -601,12 +601,6 @@ ul {
 
 }
 
-/* xl */
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
 
 /* 2xl */
 @media (min-width: 1536px) {
@@ -614,4 +608,3 @@ ul {
     max-width: 1536px;
   }
 }
-
