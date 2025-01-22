@@ -4,35 +4,90 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>travelAgnecy</title>
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="icon" type="image/png" href="./images/favicon.png">
-    <link rel="apple-touch-icon" type="image/png" href="./images/favicon.png">
-</head>
-    <body>
-        <header>
-            <div class="container">
-            </div>
-        </header>
-        <main>
-            <section class="container">
-                <p>one</p>
-            </section>
-            <section class="container">
-                <p>two</p>
-            </section>
-            <section class="container">
-                <p>three</p>
-            </section>
-            <article class="flex-container bg-color-blue md-container">
-                <section class="left-aligned-text">
-                    <h4>Call to action! It's time!</h4>
-                    <p>Sign up for our product by clicking that button right over there!</p>
-                </section>
-                <a href="./pages/sign-up.html"><button class="sign-up-btn">Sign Up</button></a>
-            </article>
-        </main>
-        <footer class="flex-container bg-color-dark unselectable" unselectable="on">
-            &copy; Copyright
-        </footer>
-    </body>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="icon" type="image/png" href="./images/favicon.png" />
+    <link rel="apple-touch-icon" type="image/png" href="./images/favicon.png" />
+  </head>
+  <body>
+    <header>
+      <div class="container"></div>
+    </header>
+    <main>
+      <section class="container">
+        <p>one</p>
+      </section>
+      <!-- Fran part: section 2 and 3 -->
+      <section class="container small-figure-destination">
+        <h3 class="destinations-title">Our destinations</h3>
+        <div class="destinations">
+          <figure class="small-figure-destination">
+            <a href="./pages/destinations.html#meath">
+              <img
+                src="./images/meath.png"
+                alt="destination1"
+                class="small-destination"
+              />
+              <figcaption>Country Meath -Ireland</figcaption>
+            </a>
+          </figure>
+          <figure class="small-figure-destination">
+            <a href="./pages/destinations.html#annaba">
+              <img
+                src="./images/annaba.jpg"
+                alt="destination1"
+                class="small-destination"
+              />
+              <figcaption>Annaba -<br />Algeria</figcaption>
+            </a>
+          </figure>
+          <figure class="small-figure-destination">
+            <a href="./pages/destinations.html#florianopolis">
+              <img
+                src="./images/florianopolis.jpeg"
+                alt="destination1"
+                class="small-destination"
+              />
+              <figcaption>Florianópolis -Brasil</figcaption>
+            </a>
+          </figure>
+          <figure class="small-figure-destination">
+            <a href="./pages/destinations.html#">
+              <img
+                src="./images/capetown.jpeg"
+                alt="destination1"
+                class="small-destination"
+              />
+              <figcaption>Cape Town -South Africa</figcaption>
+            </a>
+          </figure>
+        </div>
+      </section>
+      <section class="container quote-section">
+        <blockquote cite="https://www.travelAgnecyGuotes.com">
+          <p class="quote-destinations">
+            "Booking our dream vacation was so easy, and everything went
+            perfectly! From the stunning destinations to the seamless planning,
+            this agency made it unforgettable. We'll definitely book again!""
+          </p>
+        </blockquote>
+        <p class="quote-author">
+          — Emma & Liam Johnson, <cite>Satisfied Travelers</cite>
+        </p>
+      </section>
+      <article class="flex-container bg-color-blue md-container">
+        <section class="left-aligned-text">
+          <h4>Call to action! It's time!</h4>
+          <p>
+            Sign up for our product by clicking that button right over there!
+          </p>
+        </section>
+        <a href="./pages/sign-up.html"
+          ><button class="sign-up-btn">Sign Up</button></a
+        >
+      </article>
+    </main>
+    <footer class="flex-container bg-color-dark unselectable" unselectable="on">
+      &copy; Copyright
+    </footer>
+  </body>
 </html>
