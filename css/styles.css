@@ -1,68 +1,421 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+}
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
-a   {
-    text-decoration: none;
-    color: inherit;
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* This is messing up my layout */
+/* main {
+  height: 100%;
+} */
+a {
+  text-decoration: none;
+  color: inherit;
 }
 ul {
-    list-style-type: none;
-    padding-left: 0;
-  }
-
+  list-style-type: none;
+  padding-left: 0;
+}
 
 .container {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+/* Footer */
+@property --dark-bg {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #1f2937;
+}
+@property --secondary-bg {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #e5e7eb;
+}
+@property --sign-up-btn-bg {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #3882f6;
+}
+.icon {
+  font-size: 1.5rem;
+  color: #1f2937;
+  width: 3em;
+}
 
+.bg-color-dark {
+  background-color: var(--dark-bg);
+  color: #fff;
+}
+.bg-color-secondary {
+  background-color: var(--secondary-bg);
+  color: #1f2937;
+}
+.bg-color-blue {
+  background-color: #3882f6;
+  color: #fff;
+}
+.unselectable {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* TODO: tidy up messy flex containers */
+.md-container {
+  max-width: 70vw;
+  border-radius: 10px;
+  margin: 1rem auto;
+}
+.left-aligned-text {
+  text-align: left;
+}
+.flex-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 1rem;
+  font-size: 0.9em 18px;
+  gap: 1rem;
+}
 
-  /* xs */
-  @media (min-width: 475px) {
-    .container {
-      max-width: 475px;
-    }
+.form-container {
+  max-width: 70vw;
+  height: 100%;
+  width: 100%;
+  align-self: center;
+}
+.form-container fieldset {
+  border: none;
+  padding: 1rem;
+  margin: 1rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.form-container fieldset > div {
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+.form-container legend {
+  margin-right: auto;
+  font-size: 36px;
+  font-weight: bolder;
+  color: #1f2937;
+}
+.form-container input {
+  flex: 3;
+  padding: 0.5rem;
+  width: 100%;
+  margin: 0.5rem 0;
+  border: none;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: 0px 4px 2px -2px #1f2937;
+  justify-self: end;
+}
 
-  }
-  
-  /* sm */
-  @media (min-width: 640px) {
-    .container {
-      max-width: 640px;
-    }
-  }
-  
-  /* md */
-  @media (min-width: 768px) {
-    .container {
-      max-width: 768px;
-    }
+.form-container input:focus {
+  border-bottom: 2px solid #1f2937;
+}
+.form-container input::placeholder {
+  visibility: hidden;
+}
+.form-container textarea {
+  flex: 3;
+  padding: 0.5rem;
+  width: 100%;
+  margin: 0.5rem 0;
+  height: 5rem;
+  border: none;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: 0px 4px 2px -2px #1f2937;
+  justify-self: end;
+  resize: vertical;
+  scrollbar-color: #1f2937 #e5e7eb;
+  scrollbar-width: thin;
+  scrollbar-gutter: auto;
+}
+.form-container textarea:focus,
+.form-container textarea:active {
+  border-bottom: 2px solid #1f2937;
+}
+.form-container textarea::placeholder {
+  visibility: hidden;
+}
+.form-container label {
+  flex: 1;
+  font-size: 1rem;
+  text-wrap: nowrap;
+  font-weight: bold;
+  justify-self: flex-start;
+  text-align: start;
+}
+.sign-up-btn {
+  background-color: var(--sign-up-btn-bg);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: solid 2px white;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  font-size: 1em;
+  font-weight: bold;
+  text-wrap: nowrap;
+}
+.sign-up-btn:hover,
+.sign-up-btn:focus {
+  filter: brightness(85%);
+}
 
+.sign-up-btn:active {
+  filter: brightness(75%);
+}
+
+/* #### fran css */
+/* section 2 */
+.destinations-title {
+  font-size: 36px;
+  font-weight: 800;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+.destinations {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.small-destination {
+  width: 150px;
+  height: 150px;
+  border-radius: 15px;
+}
+
+.small-figure-destination > a > figcaption {
+  font-size: 22px;
+  width: 150px;
+}
+
+.small-figure-destination {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+/* section 3 */
+.quote-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: #e5e7eb;
+  padding: 6rem;
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+}
+
+.quote-destinations {
+  font-size: 36px;
+  font-style: italic;
+  font-weight: 300;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.quote-author {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+/* destination page */
+.back-link {
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px; /* Adds rounded corners */
+  background-color: #f9f9f9;
+}
+
+.back-link:hover {
+  background-color: #e0e0e0;
+}
+
+.destination-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-top: 2rem;
+}
+.destination-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  margin-top: 4rem;
+}
+
+.destination {
+  display: flex;
+  max-width: 90%;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.destination-image {
+  width: 25rem;
+  height: 25rem;
+  border-radius: 1rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.destination-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 1rem;
+  margin: 3rem;
+}
+
+.destination-info > h2 {
+  font-size: 2rem;
+}
+
+.destination-info > p {
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+.button-group {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #13aa52;
+  border: none;
+  border-radius: 5px;
+  min-width: 10rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0d803e;
+}
+
+.btn:active {
+  background-color: #0a6b34;
+}
+
+/* Combined media query for cell phones and tablets */
+@media only screen and (max-width: 1024px) {
+  .destination {
+    flex-direction: column;
   }
-  
-  /* lg */
-  @media (min-width: 1024px) {
-    .container {
-      max-width: 1024px;
-    }
+  .destination-image-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
   }
-  
-  /* xl */
-  @media (min-width: 1280px) {
-    .container {
-      max-width: 1280px;
-    }
+  .destination-title {
+    text-align: center;
   }
-  
-  /* 2xl */
-  @media (min-width: 1536px) {
-    .container {
-      max-width: 1536px;
-    }
+  .button-group {
+    justify-content: center;
   }
+}
+
+/* xs */
+@media (min-width: 475px) {
+  .container {
+    max-width: 475px;
+  }
+}
+
+/* sm */
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+/* md */
+@media (max-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+  /* Tidy up md-container */
+  .form-container label {
+    display: none;
+  }
+  .form-container input::placeholder {
+    visibility: visible;
+  }
+  .form-container textarea::placeholder {
+    visibility: visible;
+  }
+  .md-container {
+    max-width: 100vw;
+    border-radius: 0;
+    margin: 0;
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
