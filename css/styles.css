@@ -9,6 +9,14 @@
     font-family: 'Roboto', sans-serif;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+main {
+  height: 100%;
+}
 a   {
     text-decoration: none;
     color: inherit;
@@ -42,6 +50,12 @@ ul {
   inherits: false;
   initial-value: #3882F6;
 }
+.icon {
+  font-size: 1.5rem;
+  color: #1f2937;
+  width: 3em;
+}
+
 .bg-color-dark {
   background-color: var(--dark-bg);
   color: #fff;
@@ -84,6 +98,7 @@ ul {
 
 .form-container{
   max-width: 70vw;
+  height: 100%;
   width: 100%;
   align-self: center;
 }
@@ -123,10 +138,35 @@ ul {
   box-shadow: 0px 4px 2px -2px #1f2937;
   justify-self: end;
 }
+
 .form-container input:focus{
   border-bottom: 2px solid #1f2937;
 }
 .form-container input::placeholder{
+  visibility: hidden;
+}
+.form-container textarea{
+  flex: 3;
+  padding: 0.5rem;
+  width: 100%;
+  margin: 0.5rem 0;
+  height: 5rem;
+  border: none;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: 0px 4px 2px -2px #1f2937;
+  justify-self: end;
+  resize: vertical;
+  scrollbar-color: #1f2937 #e5e7eb;
+  scrollbar-width: thin;
+  scrollbar-gutter: auto;
+}
+.form-container textarea:focus,
+.form-container textarea:active{
+  border-bottom: 2px solid #1f2937;
+}
+.form-container textarea::placeholder{
   visibility: hidden;
 }
 .form-container label{
@@ -139,7 +179,7 @@ ul {
 }
 .sign-up-btn{
   background-color: var(--sign-up-btn-bg);
-  color: #fff;
+  color: white;
   padding: 0.5rem 1rem;
   border: solid 2px white;
   border-radius: 5px;
@@ -147,6 +187,7 @@ ul {
   outline: none;
   font-size: 1em;
   font-weight: bold;
+  text-wrap: nowrap;
 }
 .sign-up-btn:hover, 
 .sign-up-btn:focus{
@@ -181,6 +222,9 @@ ul {
     display: none;
   }
   .form-container input::placeholder{
+    visibility: visible;
+  }
+  .form-container textarea::placeholder{
     visibility: visible;
   }
   .md-container {
