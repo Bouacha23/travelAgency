@@ -14,9 +14,11 @@ body {
   flex-direction: column;
   height: 100vh;
 }
-main {
+
+/* This is messing up my layout */
+/* main {
   height: 100%;
-}
+} */
 a {
   text-decoration: none;
   color: inherit;
