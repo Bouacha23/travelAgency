@@ -382,11 +382,15 @@ header nav {
   display: none;
 }
 
+header nav ul {
+  width: 20rem;
+}
+
 header nav li {
   text-align: center;
 }
 header nav li a {
-  width: 8rem;
+  width: 7rem;
   text-transform: capitalize;
   font-size: 1rem;
   border: 1px solid var(--dark-bg);
@@ -396,18 +400,82 @@ header nav li a {
 header nav ul li a:hover {
   border: 1px solid var(--header-link-text);
 }
-
-.header-mobiel-icon {
+.menu-icon {
+  margin: 1.5rem 0px;
+  width: 30px;
+  height: 1.2rem;
+  cursor: pointer;
   position: relative;
-  width: 2.5rem;
-  height: 1.9rem;
 }
-.header-mobiel-icon div {
-  height: 0.3rem;
-  margin-bottom: 0.3rem;
-  background-color: white;
-  border-radius: 0.1rem;
+.menu-icon span {
+  background-color: var(--header-link-text);
+  height: 0.2rem;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  transition: all 0.3s ease;
+  border-radius: 0.2rem;
 }
+.menu-icon span:first-child {
+  top: 0;
+}
+.menu-icon span:nth-child(2) {
+  top: 6px;
+}
+.menu-icon span:last-child {
+  top: 12px;
+}
+.menu-icon:hover span:nth-child(2) {
+  opacity: 0;
+}
+.menu-icon:hover span:first-child,
+.menu-icon:hover span:last-child {
+  top: 6px;
+  background-color: var(--sign-up-btn-bg);
+}
+.menu-icon:hover span:first-child {
+  transform: rotate(45deg);
+}
+.menu-icon:hover span:last-child {
+  transform: rotate(-45deg);
+}
+.menu-icon:hover  .header-sm-screen {
+  left: 0px;
+}
+
+.about-us {
+  position: relative;
+  height: 30rem;
+  display: flex ; 
+  align-items: center;
+}
+
+.about-us img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.about-text {
+  background: var(--sign-up-btn-bg);
+  padding: 1.4rem;
+  border-radius: 0.2rem;
+  text-align: center;
+  color: var(--header-link-text);
+}
+
+.about-text h1 {
+  color: var(--header-text);
+  font-size: 3rem;
+  margin: 1rem 0rem;
+}
+
+.about-text p  {
+  font-size: 1rem;
+}
+
 
 .hero {
   height: 100vh;
@@ -457,7 +525,7 @@ header nav ul li a:hover {
 
 .hero-text {
   width: 100%;
-  padding: 2rem 0rem;
+  margin-top: 1rem ;
 }
 
 .team {
@@ -514,13 +582,9 @@ header .header-sm-screen {
   position: absolute;
   z-index: 100;
   top: 4rem;
-  left: 0;
+  left: -100%;
   background-color: var(--dark-bg);
-  display: none;
-}
-
-header .header-lg-screen:focus .header-sm-screen {
-  display: block;
+  color: var(--header-link-text);
 }
 
 .header-sm-screen ul {
@@ -534,11 +598,14 @@ header .header-lg-screen:focus .header-sm-screen {
 }
 
 .header-sm-screen ul a {
+  text-transform: capitalize;
   border: none;
   font-size: 1.5rem;
 }
 .header-sm-screen ul a:hover {
   border: none;
+  color: var(--sign-up-btn-bg);
+ 
 }
 
 /* media queries */
@@ -578,6 +645,8 @@ header .header-lg-screen:focus .header-sm-screen {
     margin: auto;
     margin-bottom: 2rem;
   }
+
+ 
 }
 
 /* md */
@@ -585,8 +654,8 @@ header .header-lg-screen:focus .header-sm-screen {
   .container {
     max-width: 768px;
   }
-
-  .header-mobiel-icon {
+  
+  .menu-icon{
     display: none;
   }
   header nav {
@@ -594,7 +663,7 @@ header .header-lg-screen:focus .header-sm-screen {
   }
 
   header nav ul {
-    width: 20rem;
+    width: 25rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -607,6 +676,28 @@ header .header-lg-screen:focus .header-sm-screen {
   .hero-container {
     justify-content: center;
   }
+
+  .about-us {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1rem ;
+  }
+  
+  .about-us img {
+    position: relative ; 
+    height: 100%;
+    width: 50%;
+  }
+  .about-text {
+    width: 50%;
+    height: 100%;
+    border-radius: none;
+    display: flex ; 
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
 }
 
 /* lg */
