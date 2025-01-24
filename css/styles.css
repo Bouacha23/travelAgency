@@ -645,8 +645,15 @@ header .header-sm-screen {
     margin: auto;
     margin-bottom: 2rem;
   }
-
- 
+  .quote-section {
+    padding: 2rem;
+  }
+  .quote-destinations {
+    font-size: 1rem;
+  }
+  .quote-author {
+    font-size: 0.5rem;
+  }
 }
 
 /* md */
@@ -710,11 +717,6 @@ header .header-sm-screen {
     width: 50%;
   }
 
-  .hero img {
-    width: 50%;
-    height: 20rem;
-  }
-
   .hero .hero-container {
     text-align: left;
     flex-direction: row;
@@ -753,8 +755,13 @@ header .header-sm-screen {
   .button-group {
     justify-content: center;
   }
-  .quote-destinations {
-    font-size: 24px;
+
+  .hero {
+    height: auto;
+  }
+  .hero img {
+    width: 40%;
+    margin: auto;
   }
 }
 
