@@ -400,6 +400,12 @@ header nav li a {
 header nav ul li a:hover {
   border: 1px solid var(--header-link-text);
 }
+
+.active {
+  border : 1px solid var(--sign-up-btn-bg) ; 
+  background-color: var(--sign-up-btn-bg);
+  
+}
 .menu-icon {
   margin: 1.5rem 0px;
   width: 30px;
