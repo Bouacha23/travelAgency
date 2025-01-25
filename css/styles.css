@@ -194,7 +194,6 @@ ul {
   padding: 0.5rem 1rem;
   font-size: 1em;
   color: #fff;
-  background-color: #13aa52;
   border: none;
   border-radius: 5px;
   min-width: 10rem;
@@ -211,7 +210,9 @@ ul {
 .btn:active {
   filter: brightness(75%);
 }
-
+.green-btn {
+  background-color: #13aa52;
+}
 .sign-up-btn {
   background-color: var(--sign-up-btn-bg);
   border: solid 2px white;
