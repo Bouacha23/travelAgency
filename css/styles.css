@@ -2,6 +2,32 @@
   font-family: "Roboto";
   src: url("../fonts/Roboto-Regular.ttf") format("truetype");
 }
+@property --dark-bg {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #1f2937;
+}
+@property --secondary-bg {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #e5e7eb;
+}
+@property --sign-up-btn-bg {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #3882f6;
+}
+@property --header-link-text {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #e5e7eb;
+}
+
+@property --header-text {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #f9faf8;
+}
 * {
   margin: 0;
   padding: 0;
@@ -37,21 +63,7 @@ ul {
   padding-right: 0.5rem;
 }
 /* Footer */
-@property --dark-bg {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #1f2937;
-}
-@property --secondary-bg {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #e5e7eb;
-}
-@property --sign-up-btn-bg {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #3882f6;
-}
+
 .icon {
   font-size: 1.5rem;
   color: #1f2937;
@@ -99,6 +111,7 @@ ul {
 
 .form-container {
   max-width: 70vw;
+  padding-top: 2rem;
   height: 100%;
   width: 100%;
   align-self: center;
@@ -177,26 +190,35 @@ ul {
   justify-self: flex-start;
   text-align: start;
 }
-.sign-up-btn {
-  background-color: var(--sign-up-btn-bg);
-  color: white;
+.btn {
   padding: 0.5rem 1rem;
-  border: solid 2px white;
-  border-radius: 5px;
-  cursor: pointer;
-  outline: none;
   font-size: 1em;
-  font-weight: bold;
+  color: #fff;
+  background-color: #13aa52;
+  border: none;
+  border-radius: 5px;
+  min-width: 10rem;
+  text-align: center;
+  cursor: pointer;
   text-wrap: nowrap;
-}
-.sign-up-btn:hover,
-.sign-up-btn:focus {
-  filter: brightness(85%);
+  transition: filter 0.3s ease;
 }
 
-.sign-up-btn:active {
+.btn:hover,
+.btn:focus {
+  filter: brightness(85%);
+}
+.btn:active {
   filter: brightness(75%);
 }
+
+.sign-up-btn {
+  background-color: var(--sign-up-btn-bg);
+  border: solid 2px white;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
 
 /* section 2 */
 .destinations-title {
@@ -324,38 +346,7 @@ ul {
   gap: 2rem;
 }
 
-.btn {
-  padding: 10px 20px;
-  font-size: 1em;
-  color: #fff;
-  background-color: #13aa52;
-  border: none;
-  border-radius: 5px;
-  min-width: 10rem;
-  text-align: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
 
-.btn:hover {
-  background-color: #0d803e;
-}
-
-.btn:active {
-  background-color: #0a6b34;
-}
-
-@property --header-link-text {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #e5e7eb;
-}
-
-@property --header-text {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #f9faf8;
-}
 
 header {
   position: fixed;
@@ -614,21 +605,7 @@ header .header-sm-screen {
  
 }
 
-/* media queries */
 
-/* xs */
-@media (min-width: 475px) {
-  .container {
-    max-width: 475px;
-  }
-}
-
-/* sm */
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
 
 /* md */
 @media (max-width: 768px) {
@@ -771,9 +748,4 @@ header .header-sm-screen {
   }
 }
 
-/* 2xl */
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
-}
+
